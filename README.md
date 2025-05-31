@@ -62,6 +62,15 @@
 
 - Protoboard(1x)
 
+#
+
+# Monte você também!
+<p>Abaixo estará um guia mostrando o passo a passo de como realizar este projeto👣</p>
+
+<h3>Siga este padrão de montagem:</h3>
+
+![Recrie!]()
+
 
 
 
