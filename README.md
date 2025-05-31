@@ -69,7 +69,7 @@
 
 <h3>Siga este padrão de montagem:</h3>
 
-![Recrie!]()
+![Recrie!](./images/Captura%20de%20tela%202025-05-31%20145223.png) 
 
 
 
