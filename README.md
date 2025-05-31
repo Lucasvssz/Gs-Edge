@@ -10,6 +10,10 @@
  # Nosso Projeto🗂️
 <strong>Nosso sistema foi feito para impedir e alertar obstrução dos bueiros,<br /> além de mostrarmos o nível da chuva no local </strong>
 
+<h3>Prototipo Visual do projeto</h3>
+
+![Prototipo]()
+
 <h2> Como funciona🤷‍♂️ </h2>
 
 - 🔧 O 1° sensor é instalado na parte interna da tampa do bueiro, ele mede continuamente a distância entre a tampa e a superfície abaixo, com a função de monitorar a elevação do nível da água e detectar possíveis obstruções causadas pelo acúmulo de lixo.
@@ -62,6 +66,8 @@
 
 - Protoboard(1x)
 
+- Recipiente cilindrico 30x5 (x1)
+
 #
 
 # Monte você também!
@@ -70,6 +76,8 @@
 <h3>Siga este padrão de montagem:</h3>
 
 ![Recrie!](./images/Captura%20de%20tela%202025-05-31%20145223.png) 
+
+
 
 
 
