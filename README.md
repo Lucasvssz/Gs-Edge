@@ -12,7 +12,7 @@
 
 <h3>Prototipo Visual do projeto</h3>
 
-![Prototipo]()
+![Prototipo](./images/ChatGPT%20Image%2029%20de%20mai.%20de%202025,%2023_32_18.png)
 
 <h2> Como funciona🤷‍♂️ </h2>
 
