@@ -1,0 +1,116 @@
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+ 
+// Sensor 1 - Medição de chuva / direita
+#define trigPin1 A2
+#define echoPin1 A3
+
+// Sensor 2 - Detecção de obstrução / esquerda
+#define trigPin2 A0
+#define echoPin2 A1
+
+// LEDs
+#define ledVerde 3
+#define ledAmarelo 4
+#define ledVermelho 5
+
+// Buzzer
+#define buzzerPin 2
+
+void setup() {
+  pinMode(trigPin1, OUTPUT);
+  pinMode(echoPin1, INPUT);
+  
+  pinMode(trigPin2, OUTPUT);
+  pinMode(echoPin2, INPUT);
+  
+  pinMode(ledVerde, OUTPUT);
+  pinMode(ledAmarelo, OUTPUT);
+  pinMode(ledVermelho, OUTPUT);
+  
+  pinMode(buzzerPin, OUTPUT);
+
+  lcd.init();
+  lcd.backlight();
+}
+
+void loop() {
+  float distanciaObstrucao = medirDistancia(trigPin1, echoPin1);
+  float distanciaChuva = medirDistancia(trigPin2, echoPin2);
+
+  lcd.clear();
+  
+  // Sistema de LEDs e LCD para Sensor 1
+  if (distanciaObstrucao > 290) {
+    digitalWrite(ledVerde, HIGH);
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVermelho, LOW);
+    lcd.setCursor(0, 0);
+    lcd.print("Chance de Alagar");
+    lcd.setCursor(0, 1);
+    lcd.print("Baixa");
+  } 
+  else if (distanciaObstrucao > 70) {
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarelo, HIGH);
+    digitalWrite(ledVermelho, LOW);
+    lcd.setCursor(0, 0);
+    lcd.print("Chance de Alagar");  
+    lcd.setCursor(0, 1);
+    lcd.print("Moderada");
+  } 
+  else {
+    digitalWrite(ledVerde, LOW);
+    digitalWrite(ledAmarelo, LOW);
+    digitalWrite(ledVermelho, HIGH);
+    lcd.setCursor(0, 0);
+    lcd.print("Chance de Alagar");
+    delay(0);
+    lcd.setCursor(0, 1);
+    lcd.print("Alta");
+    tone(buzzerPin, 250);
+    delay(200);
+    noTone(buzzerPin);
+  }
+	delay(1000);
+
+
+  // ====== AQUI COMEÇA A NOVA FUNÇÃO: Medição de volume e exibição =====
+
+  lcd.clear();
+  lcd.setCursor(1, 0);
+  if (distanciaChuva >= 30) {
+    lcd.print("Sem Chuva");
+  } else if (distanciaChuva > 20) {
+    lcd.print("Chuva Fraca");
+  } else if (distanciaChuva > 15 ) {
+    lcd.print("Chuva Moderada");
+  } else {
+    lcd.print("Chuva Forte");
+  } 
+
+  // ====== FIM DA NOVA FUNÇÃO ======
+
+  delay(1000);  // Mantido um pouco maior para melhor visualização
+}
+
+// Função genérica para medir distância
+float medirDistancia(int trigPin, int echoPin) {
+  long duration;
+  float distance_cm;
+
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+
+  distance_cm = duration * 0.0343 / 2;
+
+  return distance_cm;
+}
