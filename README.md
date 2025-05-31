@@ -89,4 +89,4 @@
 
 <h2>Nós da company404 agradecemos sua atenção!👋</h2>
 
-[![GitHub](https://github.com/github.png?size=64)](https://github.com/github)
+![Company 404](./images/error_64x64.png)
