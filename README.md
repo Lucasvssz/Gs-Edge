@@ -76,5 +76,3 @@
 <h3>Siga este padrão de montagem:</h3>
 
 ![Recrie!](./images/Captura%20de%20tela%202025-05-31%20145223.png) 
-
-![Company404](./images/Captura%20de%20tela%202025-05-31%20180510.png?size=100)
