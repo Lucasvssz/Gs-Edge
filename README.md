@@ -71,8 +71,16 @@
 #
 
 # Monte você também!
-<p>Abaixo estará um guia mostrando o passo a passo de como realizar este projeto👣</p>
+<p>Siga os passos abaixo</p>
 
-<h3>Siga este padrão de montagem:</h3>
+> <h3>Siga este padrão de montagem:</h3>
 
 ![Recrie!](./images/Captura%20de%20tela%202025-05-31%20145223.png) 
+
+>> <h3>Depois que montar basta implementar o arquivo .txt que deixaremos disponivel, e tudo pronto!!</h3>
+
+#
+
+<h2>Nós da company404 agradecemos sua atenção!👋</h2>
+
+[![GitHub](https://github.com/github.png?size=64)](https://github.com/github)
