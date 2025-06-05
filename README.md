@@ -10,8 +10,10 @@
  # Nosso Projeto🗂️
 <strong>Nosso sistema foi feito para impedir e alertar obstrução dos bueiros,<br /> além de mostrarmos o nível da chuva no local </strong>
 
+>> Saiba mais sobre nosso projeto:
+
 ![YouTube](https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_(2017).svg/64px-YouTube_full-color_icon_(2017).svg.png)
- <a href="https://youtu.be/MCSw4fT85kU?si=KpTZby5886DSWUUW"> Entenda mais sobre o projeto 
+<a href="https://youtu.be/7wvMSYw2dFI?si=8TIhvcBbCaYFnVsP"> Vídeo explicativo
  
 ![Tinkercad](./images/Imagem%20do%20WhatsApp%20de%202025-05-31%20à(s)%2019.11.13_d333cb35.jpg)
 <a href="https://www.tinkercad.com/things/jeyR2GljNCO/editel?returnTo=%2Fdashboard%2Fdesigns%2Fcircuits&sharecode=Vd9YiHl_nKyElKVlxHvcaPzvqxvrbccIQWuTYsueVI4"> Tinkercad do projeto
